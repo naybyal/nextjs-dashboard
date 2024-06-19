@@ -1,7 +1,7 @@
 function Page() {
   return (
     <div>
-      <p>Customers &apos; Page</p>
+      <p>Customers&apos; Page</p>
     </div>
   )
 }
