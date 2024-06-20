@@ -10,7 +10,7 @@ import {
 import Link from 'next/link';
 import { Button } from '@/app/ui/button';
 import { updateInvoice } from '@/app/lib/actions'
-import { useActionState } from 'react'
+import { useFormState } from 'react-dom'
 
 export default function EditInvoiceForm({
   invoice,
@@ -21,7 +21,7 @@ export default function EditInvoiceForm({
 }) {
   const initialState = { message: null, errors: {} };
   const updateInvoicesWithId = updateInvoice.bind(null, invoice.id);
-  const [state, formAction] = useActionState(updateInvoicesWithId, initialState);
+  const [state, formAction] = useFormState(updateInvoicesWithId, initialState);
   console.log(state);
 
   return (
